@@ -1,11 +1,11 @@
 {
-  "name": "javari-video-analysis",
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "github": {
+    "autoAlias": false
+  },
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "npm install",
-  "regions": ["iad1"],
   "headers": [
     {
       "source": "/(.*)",
@@ -15,5 +15,8 @@
         { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ]
 }
