@@ -1,7 +1,7 @@
 {
   "name": "javari-video-analysis",
   "version": "1.0.0",
-  "description": "AI-powered video analysis module for property inspection, damage assessment, and content understanding",
+  "description": "AI-powered video analysis for property inspection, damage assessment, and content understanding",
   "author": "CR AudioViz AI LLC",
   "license": "MIT",
   "private": true,
@@ -28,15 +28,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "keywords": [
-    "video-analysis",
-    "ai",
-    "property-inspection",
-    "damage-detection",
-    "gemini",
-    "twelve-labs",
-    "roboflow",
-    "javari"
-  ]
+  }
 }
