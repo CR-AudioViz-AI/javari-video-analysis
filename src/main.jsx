@@ -1,3 +1,7 @@
+// Javari Video Analysis - Entry Point
+// CR AudioViz AI, LLC | Created: December 17, 2025
+// Mission: "Your Story. Our Design"
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
