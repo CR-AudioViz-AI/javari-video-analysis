@@ -1,29 +1,48 @@
 # Javari Video Analysis
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FCR-AudioViz-AI%2Fjavari-video-analysis)
+AI-powered video analysis tool for property inspection, damage detection, content search, and more.
 
-**AI-Powered Video Analysis for Property Inspection, Damage Assessment, and Content Understanding**
+**Part of the CR AudioViz AI Platform**  
+*"Your Story. Our Design"*
 
-Built by CR AudioViz AI LLC • Part of the Javari AI Ecosystem
+---
 
-## Features
+## 🎯 Features
 
-- 🎬 **Video Upload & Analysis** - Process drone footage, security cameras, or any video content
-- 🔍 **Smart API Routing** - Automatically selects the optimal AI service for each task
-- 🏠 **Property Damage Detection** - Identify roof damage, structural issues, and wear
-- 🔎 **Content Search** - Find specific moments using natural language
-- 📊 **Detailed Reports** - Export comprehensive analysis results
+- **Property Damage Inspection** - Analyze roof, siding, or structural damage from drone/camera footage
+- **Vehicle Damage Assessment** - Detect dents, scratches, and damage on vehicles
+- **Content Search & Moments** - Find specific moments, objects, or actions within videos
+- **Object Detection & Tracking** - Track and identify objects, people, or vehicles across video
+- **Video Summary & Analysis** - Generate comprehensive summaries with key moments
+- **Custom Video Query** - Ask any question about your video content
 
-## Integrated AI Services
+---
 
-| Service | Use Case | Free Tier |
-|---------|----------|-----------|
-| **Google Gemini** | General video Q&A, damage analysis | 1,500 req/day |
-| **Twelve Labs** | Semantic search, timestamp finding | 600 min lifetime |
-| **Google Cloud Video Intelligence** | Object detection, labels | 1,000 min/month |
-| **Roboflow** | Custom detection models | 1,000 calls/month |
+## 🤖 AI Engines
 
-## Getting Started
+This tool leverages **4 leading AI services** with smart routing:
+
+| Engine | Best For | Free Tier |
+|--------|----------|-----------|
+| **Google Gemini 2.0** | General video understanding, Q&A | 1,500 requests/day |
+| **Twelve Labs** | Semantic search, timestamp finding | 600 minutes lifetime |
+| **Google Cloud Video Intelligence** | Object detection, scene analysis | 1,000 minutes/month |
+| **Roboflow** | Custom damage detection | 1,000 calls/month |
+
+### Smart API Routing
+
+```
+Property Damage → Gemini (primary) → Roboflow (fallback)
+Vehicle Damage  → Roboflow (primary) → Gemini (fallback)
+Semantic Search → Twelve Labs (primary) → Gemini (fallback)
+Object Tracking → Video Intelligence (primary) → Gemini (fallback)
+Content Summary → Gemini (primary) → Twelve Labs (fallback)
+Custom Query    → Gemini (primary) → Twelve Labs (fallback)
+```
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -33,39 +52,136 @@ Built by CR AudioViz AI LLC • Part of the Javari AI Ecosystem
 ### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/CR-AudioViz-AI/javari-video-analysis.git
 cd javari-video-analysis
+
+# Install dependencies
 npm install
-```
 
-### Development
+# Copy environment file
+cp .env.example .env
 
-```bash
+# Edit .env with your API keys
+nano .env
+
+# Start development server
 npm run dev
 ```
 
-### Build
+### Production Build
 
 ```bash
 npm run build
+npm run preview
 ```
-
-## Environment Variables
-
-Create a `.env` file with your API keys:
-
-```env
-VITE_GEMINI_API_KEY=your_gemini_key
-VITE_TWELVE_LABS_API_KEY=your_twelve_labs_key
-VITE_GOOGLE_CLOUD_API_KEY=your_google_cloud_key
-VITE_ROBOFLOW_API_KEY=your_roboflow_key
-```
-
-## License
-
-MIT © CR AudioViz AI, LLC
 
 ---
 
-**"Your Story. Our Design."**  
-Everyone connects. Everyone wins.
+## 🔑 API Keys Required
+
+Get your API keys from these dashboards:
+
+1. **Google Gemini**: https://aistudio.google.com/apikey
+2. **Twelve Labs**: https://playground.twelvelabs.io
+3. **Google Cloud Video Intelligence**: https://console.cloud.google.com/apis/library/videointelligence.googleapis.com
+4. **Roboflow**: https://app.roboflow.com/settings/api
+
+---
+
+## 📁 Project Structure
+
+```
+javari-video-analysis/
+├── index.html          # Entry HTML
+├── package.json        # Dependencies
+├── vite.config.js      # Vite configuration
+├── .env.example        # Environment template
+├── .gitignore          # Git ignore rules
+├── README.md           # This file
+└── src/
+    ├── main.jsx        # React entry point
+    ├── App.jsx         # Main application component
+    └── styles.css      # All styles
+```
+
+---
+
+## 🎨 Tech Stack
+
+- **Framework**: React 18 + Vite
+- **Styling**: Custom CSS with CSS Variables
+- **Icons**: Lucide React
+- **Database**: Supabase (optional, for saving results)
+
+---
+
+## 📊 Credit System
+
+| Analysis Type | Credits |
+|---------------|---------|
+| Property Damage Inspection | 5 |
+| Vehicle Damage Assessment | 4 |
+| Content Search & Moments | 3 |
+| Object Detection & Tracking | 4 |
+| Video Summary & Analysis | 2 |
+| Custom Video Query | 3 |
+
+---
+
+## 🛠️ Development
+
+```bash
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+```
+
+---
+
+## 📋 Deployment
+
+### Vercel (Recommended)
+
+1. Push to GitHub
+2. Connect to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
+
+### Environment Variables for Vercel
+
+```
+VITE_GEMINI_API_KEY=your_key
+VITE_TWELVE_LABS_API_KEY=your_key
+VITE_GOOGLE_CLOUD_API_KEY=your_key
+VITE_ROBOFLOW_API_KEY=your_key
+VITE_ROBOFLOW_WORKSPACE=your_workspace
+```
+
+---
+
+## 📜 License
+
+Copyright © 2025 CR AudioViz AI, LLC. All rights reserved.
+
+**EIN**: 93-4520864
+
+---
+
+## 🤝 Support
+
+For issues or questions:
+- Email: support@craudiovizai.com
+- Website: https://craudiovizai.com
+
+---
+
+*Built with ❤️ by CR AudioViz AI, LLC*
